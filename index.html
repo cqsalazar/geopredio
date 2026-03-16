@@ -16,9 +16,6 @@
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
             integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
             crossorigin="">
-        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-            crossorigin=""></script>
     </head>
     <body>
         <header>
@@ -33,23 +30,36 @@
                             <option value="NPN">NPN</option>
                             <option value="COORDENADAS">COORDENADAS</option>
                         </select>
-                    <input placeholder="0">
-                    <button>BUSCAR</button>
-                    <button>Google Maps</button>
+                    <input type="number" id="codigoInput" placeholder="0">
+                    <button onclick="consultarDatos()">BUSCAR</button>
                 </aside>
                 <div class="item2">
                     <div id="map"></div>
-                    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d180240.67505459097!2d-76.63000896226411!3d3.400409622838908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a6f0cc4bb3f1%3A0x1f0fb5e952ae6168!2sCali%2C%20Valle%20del%20Cauca!5e0!3m2!1ses!2sco!4v1770749120308!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
                 </div>
                 <section class="item3">
-                    <h2>Tabla</h2>
-                    <img class="tabla" src="img/tabla.png" alt="tabla">
+                    <table class="tabla2" id="tablaInfo" style="display:none;">
+                        <thead>
+                            <tr>
+                                <th>ID PREDIO</th>
+                                <th>DEPARTAMENTO</th>
+                                <th>MUNICICPIO</th>
+                                <th>ZONA</th>
+                                <th>SECTOR</th>
+                                <th>COMUNA</th>
+                                <th>BARRIO</th>
+                                <th>MANZANA</th>
+                                <th>TERRENO</th>
+                                <th>NPN</th>
+                                <th>NÚMERO PREDIAL</th>
+                                <th>ÁREA (m²)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cuerpoTabla"></tbody>
+                    </table>
                 </section>
             </div>
         </main>
-        <!-- <footer>
-            <p>Información de Contacto</p>
-        </footer> -->
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
         <script src="script.js"></script>
     </body>
 </html>
