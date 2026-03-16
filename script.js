@@ -7,13 +7,14 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
 }).addTo(map);
 
 let capaGeometria; // Variable para almacenar la capa dibujada
+const API_URL = import.meta.env.API_URL || 'http://localhost:5000';
 
 async function consultarDatos() {
     const codigo = document.getElementById('codigoInput').value;
     if (!codigo) return alert("Por favor ingresa un código");
     try {
-const response = await fetch(`/api/consultar/${codigo}`);
-if (!response.ok) throw new Error("No se encontró el barrio");
+const response = await fetch(`${API_URL}/api/consultar/${codigo}`);
+if (!response.ok) throw new Error("No se encontró el ID PREDIO");
 
 const data = await response.json();
 
