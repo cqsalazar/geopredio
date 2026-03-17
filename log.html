@@ -1,39 +1,27 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <title>Bootcamp - Login</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GeoPredio</title>
+  <meta name="description" content="GeoPredio es una herramienta web para la búsqueda geográfica de predios urbanos en el Distrito de 
+  Santiago de Cali. Consulta predios mediante identificadores como ID PREDIO o NPN, o directamente con coordenadas geográficas.
+  Visualiza resultados en un mapa interactivo y una tabla con información alfanumérica catastral.">
+  <meta name="keywords" content="Búsqueda, consulta, catastro, predio, terreno, Cali, coordenadas, identificadores">
+  <meta name="author" content="Cristian Quintero Salazar | Carlos Bermúdez López | Francisco Orozco Suárez">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.misitioweb.com"> <!-- Permite que el sitio web nunca se mueva de su link original (seguridad) -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="img/marca.png">
 </head>
-<body>
-  <main class="container">
-    <div class="card auth-card">
-      <h1>Bootcamp App</h1>
-
-      <div id="auth-forms">
-        <div id="login-form">
-          <h2>Iniciar sesión</h2>
-          <input id="login-email" placeholder="Email" type="email">
-          <input id="login-pass" placeholder="Contraseña" type="password">
-          <button id="btn-login">Entrar</button>
-          <p>¿No tienes cuenta? <a href="#" id="show-register">Regístrate</a></p>
-        </div>
-
-        <div id="register-form" style="display:none;">
-          <h2>Registro</h2>
-          <input id="reg-name" placeholder="Nombre" type="text">
-          <input id="reg-email" placeholder="Email" type="email">
-          <input id="reg-pass" placeholder="Contraseña" type="password">
-          <button id="btn-register">Registrar</button>
-          <p>¿Ya tienes cuenta? <a href="#" id="show-login">Inicia sesión</a></p>
-        </div>
-      </div>
-
-      <div id="msg" class="msg"></div>
-    </div>
-  </main>
-
-  <script src="app.js"></script>
+<body class="bodyLog">
+  <div class="containerLog">
+    <h2><img class="icon" src="img/marca.png" alt=""> GeoPredio</h2>
+    <h2>Iniciar sesión</h2>
+    <input id="login-email" placeholder="Email" type="email">
+    <input id="login-pass" placeholder="Contraseña" type="password">
+    <button id="btn-login">Entrar</button>
+  </div>
+  <script src="server.js"></script>
 </body>
 </html>
