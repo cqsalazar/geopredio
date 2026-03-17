@@ -14,10 +14,9 @@ async function consultarDatos() {
     const codigo = document.getElementById('codigoInput').value;
     if (!codigo) return alert("Por favor ingresa un código");
     try {
-const response = await fetch(`/api/consultar/${codigo}`);
-if (!response.ok) throw new Error("No se encontró el ID PREDIO");
-
-const data = await response.json();
+        const response = await fetch(`/api/consultar/${codigo}`);
+        if (!response.ok) throw new Error("No se encontró el ID PREDIO");
+    const data = await response.json();
 
 // 1. Mostrar información en la tabla (accediendo a 'properties')
 document.getElementById('tablaInfo').style.display = 'table';
