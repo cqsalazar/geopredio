@@ -14,7 +14,8 @@ async function consultarDatos() {
     const codigo = document.getElementById('codigoInput').value;
     if (!codigo) return alert("Por favor ingresa un código");
     try {
-        const response = await fetch(`/api/consultar/${codigo}`);
+        const API_URL = "https://geopredio-backend-1.onrender.com";
+        const response = await fetch(`${API_URL}/api/consultar_idpredio/${codigo}`);
         if (!response.ok) throw new Error("No se encontró el ID PREDIO");
     const data = await response.json();
 
